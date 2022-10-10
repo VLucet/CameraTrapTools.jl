@@ -32,7 +32,7 @@ function read_dir(rootpath::String, pattern::String = ".jpg" ;
 end
 
 """
-    Produces a regex pattern
+    Produce a regex pattern
 
 For now, simple r"pattern" is generated.
 """
