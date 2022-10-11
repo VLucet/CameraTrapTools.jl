@@ -1,5 +1,7 @@
 module CameraTrapTools
 
+    using ScanDir # Used for ScanDir.walkdir
+
     export read_dir
     export Survey
 

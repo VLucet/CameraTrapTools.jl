@@ -10,13 +10,14 @@ function read_dir(rootpath::String, pattern::String = ".jpg" ;
 
     file_list = String[]
 
-    for (root, dirs, files) in walkdir(rootpath)
+    for (root, dirs, files) in ScanDir.walkdir(rootpath)
 
         if isempty(dirs) & !isempty(files)
             
             relative_root = replace(root, rootpath => "" )
             @info "Listing files in $(relative_root)"
             
+            # TODO potential speedup here
             for file in files
                 if occursin(pattern, file)
                     file_path = absolute ? joinpath(root, file) : joinpath(relative_root, file)

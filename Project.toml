@@ -3,6 +3,8 @@ uuid = "3263893d-0723-4c4b-8e8f-bb49e15bcdcd"
 authors = ["Valentin Lucet"]
 version = "0.1.0"
 
+[deps]
+ScanDir = "af3a3400-1793-11ea-1d1f-a522511abb08"
 [compat]
 julia = "1"
 
