@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [deps]
 ScanDir = "af3a3400-1793-11ea-1d1f-a522511abb08"
+
 [compat]
 julia = "1"
 
