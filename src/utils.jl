@@ -17,7 +17,7 @@ function read_dir(rootpath::String, pattern::String = ".jpg" ;
             relative_root = replace(root, rootpath => "" )
             @info "Listing files in $(relative_root)"
             
-            # TODO potential speedup here
+            # TODO potential speedup: list comprehension, maybe using Glob.jl?
             for file in files
                 if occursin(pattern, file)
                     file_path = absolute ? joinpath(root, file) : joinpath(relative_root, file)
