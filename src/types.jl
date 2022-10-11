@@ -3,6 +3,7 @@
 
 For now, a simple rootpath with a given image count.
 """
+# TODO include survey structure with a set of dicts
 struct Survey
     root::String
     images::Array{String}
