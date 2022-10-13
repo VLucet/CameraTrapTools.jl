@@ -12,7 +12,7 @@ struct Survey
 
     function Survey(name::String, root::String)
         if isdir(root)
-            new(name, root, images, image_count)
+            new(name, root)
         else
             throw("Path $(root) is not a directory.")
         end
