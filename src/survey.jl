@@ -25,7 +25,7 @@ end
 This function reads all files in a Survey directory and returns an array of file 
 paths.
 """
-function scan(rootpath::String, pattern::String = ".jpg"; absolute::Bool = true)
+function scan(rootpath::String, pattern::String; absolute::Bool = true)
 
     pattern = make_pattern(pattern)
 
@@ -54,14 +54,14 @@ function scan(rootpath::String, pattern::String = ".jpg"; absolute::Bool = true)
 
 end
 
-function scan(survey::Survey, pattern::String = ".jpg"; absolute::Bool = true)
+function scan(survey::Survey, pattern::String; absolute::Bool = true)
 
     rootpath = survey.root
     name = survey.name
 
     @info "Scanning survey '$(name)' at root folder $(rootpath)"
 
-    images = scan(rootpat, pattern; absolute = absolute)
+    images = scan(rootpath, pattern; absolute = absolute)
     image_count = length(images)
 
     return ((images, image_count))
