@@ -2,11 +2,11 @@ module CameraTrapTools
 
     using ScanDir # Used for ScanDir.walkdir
 
-    export read_dir
+    export scan
     export Survey
 
     include(joinpath(".", "utils.jl"))
-    include(joinpath(".", "types.jl"))
+    include(joinpath(".", "survey.jl"))
     include(joinpath(".", "show.jl"))
 
 end
