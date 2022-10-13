@@ -64,5 +64,5 @@ function scan(survey::Survey, pattern::String = ".jpg"; absolute::Bool = true)
     images = scan(rootpat, pattern; absolute = absolute)
     image_count = length(images)
 
-    return((images, image_count))
+    return ((images, image_count))
 end
