@@ -1,6 +1,7 @@
 module CameraTrapTools
 
-    using ScanDir # Used for ScanDir.walkdir
+    using ScanDir # For ScanDir.walkdir
+    using UUIDs   # For generating unique ids for images 
 
     export scan
     export Survey

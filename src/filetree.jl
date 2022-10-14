@@ -20,7 +20,7 @@ function load_filetree(top::String, pattern::String)
             branches,
             merge(
                 Dict([(d => Dict()) for d in dirs]),
-                Dict([(f => Nothing) for f in files]),
+                Dict([(f => UUIDs.uuid4()) for f in files]),
             ),
         )
     end
