@@ -6,7 +6,8 @@ module CameraTrapTools
     export Survey
 
     include(joinpath(".", "utils.jl"))
-    include(joinpath(".", "survey.jl"))
+    include(joinpath(".", "types.jl"))
+    include(joinpath(".", "filetree.jl"))
     include(joinpath(".", "show.jl"))
 
 end
