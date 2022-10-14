@@ -7,6 +7,6 @@ function Base.show(io::IO, survey::Survey)
     obj_print = """
 
                 ✔ [Camera Trap Survey] 
-                ↳ [Image count: $(survey.image_count)] """
+                ↳ [Root: $(survey.root)] """
     print(io, obj_print)
 end
