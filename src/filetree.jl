@@ -1,7 +1,9 @@
 """
     Load a file tree as a nested directories
 
-Loads the file tree 
+Load a file tree, filtering for files within pattern.
+Adapted from python 2 code from:
+https://stackoverflow.com/questions/9618862/
 """
 function load_filetree(top::String, pattern::String)
 
