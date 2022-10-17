@@ -15,7 +15,7 @@ end
 
 Loads a dict and looks up a key.
 """
-function get_filetype(pattern::String)
+function get_type(pattern::String)
 
     pattern_dict = Dict(".jpg" => "JPEG",
                         ".JPG" => "JPEG",
