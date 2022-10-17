@@ -49,13 +49,3 @@ function set_leaf(tree, branches, leaf)
     set_leaf(tree[branches[1]], branches[2:end], leaf)
 
 end
-
-"""
-    Load filetree
-
-Generate a file tree, filtering for files within pattern
-"""
-function load_filetree
-
-end
-
