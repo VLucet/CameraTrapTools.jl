@@ -66,15 +66,16 @@ function scan(rootpath::String, pattern::String; absolute::Bool = true)
 
 end
 
-function scan(survey::Survey, pattern::String; absolute::Bool = true)
+function scan(survey::Survey, absolute::Bool = true)
 
     rootpath = survey.root
     name = survey.name
+    pattern = survey.pattern
 
     @info "Scanning survey '$(name)' at root folder $(rootpath)"
 
-    survey.images = scan(rootpath, pattern; absolute = absolute)
-    survey.image_count = length(survey.images)
+    file_list = scan(rootpath, pattern; absolute = absolute)
+    file_count = length(file_list)
 
-    return (survey)
+    return (file_count, file_list)
 end

@@ -8,16 +8,17 @@ struct Survey
     name::String
     root::String
     filetree::Dict
-    type::Dict
+    pattern::String
+    filetype::String
 
     function Survey(name::String, root::String, pattern::String)
 
         if isdir(root)
 
-            type = Dict(pattern => get_type(pattern))
+            filetype = get_type(pattern)
             filetree = load_filetree(root, pattern)
 
-            return new(name, root, filetree, type)
+            return new(name, root, filetree, pattern, filetype)
 
         else
             throw("Path $(root) is not a directory.")
